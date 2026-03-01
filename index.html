@@ -1,105 +1,249 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Page Title - Site Name</title>
-    <meta name="author" content="Author Name" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Page description for SEO" />
-    <link rel="stylesheet" type="text/css" href="src/stylesheet.css" />
-    <link rel="icon" href="./src/logo/CUHK_rm_bg.png" type="image/x-icon" />
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
-    <!-- Google Analytics (optional - remove if not needed) -->
-    <!--
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag("js", new Date());
-      gtag("config", "G-XXXXXXXXXX");
-    </script>
-    -->
-  </head>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond Shore | 美国硕博 / 港新博士申请工作室</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="assets/js/tailwind.config.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="font-sans antialiased text-gray-900 bg-white selection:bg-gray-900 selection:text-white">
 
-  <body>
-    <table class="main-container">
-      <tbody>
-        <tr class="zero-padding">
-          <td class="zero-padding">
-            <!-- Navigation / Back Link (optional for subpages) -->
-            <div style="text-align: center; margin-bottom: 30px;">
-              <a href="index.html" style="font-size: 16px; font-weight: 500;">← Back to Home</a>
+    <header class="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100 transition-all duration-300" id="navbar">
+        <div class="site-container">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <span class="font-bold text-xl tracking-tight">Beyond Shore | 彼岸工作室</span>
+                </div>
+
+                <nav class="hidden md:flex space-x-10">
+                    <a href="#home" data-nav-target="home" class="nav-link nav-link-active">首页</a>
+                    <a href="#features" data-nav-target="features" class="nav-link">服务</a>
+                    <a href="cases.html" class="nav-link">案例</a>
+                    <a href="#mentors" data-nav-target="mentors" class="nav-link">导师阵营</a>
+                    <a href="#about" data-nav-target="about" class="nav-link">为什么选我们</a>
+                    <a href="#contact" data-nav-target="contact" class="nav-link">联系我们</a>
+                </nav>
+
+                <div class="flex items-center">
+                    <a href="#contact" class="hidden md:inline-flex items-center justify-center px-5 py-2.5 border border-transparent text-sm font-medium rounded-full text-white bg-gray-900 hover:bg-gray-800 transition-colors shadow-sm">
+                        预约咨询
+                    </a>
+                    <div class="md:hidden ml-4">
+                        <button id="mobile-menu-btn" class="p-2 text-gray-500 hover:text-gray-900 focus:outline-none">
+                            <i data-lucide="menu" class="w-6 h-6"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100">
+            <div class="px-2 pt-2 pb-6 space-y-1 sm:px-3">
+                <a href="#home" data-nav-target="home" class="nav-link-mobile nav-link-mobile-active">首页</a>
+                <a href="#features" data-nav-target="features" class="nav-link-mobile">服务</a>
+                <a href="cases.html" class="nav-link-mobile">案例</a>
+                <a href="#mentors" data-nav-target="mentors" class="nav-link-mobile">导师阵营</a>
+                <a href="#about" data-nav-target="about" class="nav-link-mobile">为什么选我们</a>
+                <a href="#contact" data-nav-target="contact" class="nav-link-mobile">联系我们</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+    <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden fade-in">
+        <div class="gradient-orb top-20 left-8 w-44 h-44 bg-gray-300"></div>
+        <div class="gradient-orb orb-delay-2 top-36 right-8 w-52 h-52 bg-gray-200"></div>
+        <div class="gradient-orb orb-delay-1 bottom-8 left-1/2 -translate-x-1/2 w-64 h-64 bg-gray-100"></div>
+        <div class="site-container text-center">
+            <div class="reveal-up max-w-fit mx-auto mb-5 px-4 py-1.5 rounded-full bg-gray-100 text-gray-600 text-sm font-medium flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-gray-500 pulse-dot"></span>
+                龙大25届学长学姐申请工作室
+            </div>
+            <h1 class="reveal-up reveal-delay-1 text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-gray-900 mb-8 leading-tight">
+                Beyond Shore<br class="hidden sm:block">
+                <span class="text-gray-400">拒绝流水线，只做结果导向申请</span>
+            </h1>
+            <p class="reveal-up reveal-delay-2 mt-4 max-w-3xl mx-auto text-xl text-gray-500 mb-10 leading-relaxed">
+                我们是 25 届毕业生发起的小而精工作室，专注美国硕博与港新博士申请。<br class="hidden sm:block">
+                从规划到文书再到套磁实战，提供真正一对一、可落地、可复盘的申请辅导。
+            </p>
+            <div class="reveal-up reveal-delay-3 flex justify-center gap-4 flex-col sm:flex-row">
+                <a href="#features" class="btn-pill btn-primary">
+                    查看服务
+                </a>
+                <a href="#contact" class="btn-pill btn-secondary">
+                    立即咨询
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="py-24 bg-gray-50 reveal-up">
+        <div class="site-container">
+            <div class="section-header">
+                <h2 class="section-eyebrow">我们提供什么服务</h2>
+                <h3 class="section-title">学长级实战辅导，拒绝模板化服务</h3>
             </div>
 
-            <!-- Hero / Intro Section -->
-            <div class="intro-band">
-              <table class="content-table">
-                <tbody>
-                  <tr class="zero-padding">
-                    <td class="profile-section">
-                      <p class="text-center">
-                        <name>Page Title</name>
-                      </p>
-                      <p>
-                        Brief introduction or tagline goes here.
-                      </p>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card-base card-white hover-lift">
+                    <div class="icon-box">
+                        <i data-lucide="compass" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-3">一对一咨询规划</h4>
+                    <p class="text-gray-500 leading-relaxed">
+                        从精准定位龙大背景坐标出发，明确选校策略、科研路径与时间节奏，减少盲目试错。
+                    </p>
+                </div>
+
+                <div class="card-base card-white hover-lift">
+                    <div class="icon-box">
+                        <i data-lucide="file-text" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-3">CV 与 SOP 文书精修</h4>
+                    <p class="text-gray-500 leading-relaxed">
+                        由有顶级录取与科研经历的导师亲自打磨，聚焦教授学术审美，不做流水线模板文书。
+                    </p>
+                </div>
+
+                <div class="card-base card-white hover-lift">
+                    <div class="icon-box">
+                        <i data-lucide="messages-square" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-3">“双重套磁”专项</h4>
+                    <p class="text-gray-500 leading-relaxed">
+                        覆盖暑研套磁与申请季套磁，并结合校内科研指导，让你在关键窗口期提升命中率。
+                    </p>
+                </div>
+
+                <div class="card-base card-white hover-lift">
+                    <div class="icon-box">
+                        <i data-lucide="route" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-3">分阶段培养策略</h4>
+                    <p class="text-gray-500 leading-relaxed">
+                        大三及以后同学立即启动套磁实战；大一大二以长期规划为主，避免过早咨询带来的时间浪费。
+                    </p>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Section 1 -->
-            <table class="content-table">
-              <tbody>
-                <tr>
-                  <td class="section-padding">
-                    <heading>Section Heading</heading>
-                    <p>
-                      Section content goes here. You can add multiple paragraphs,
-                      <a href="#">links</a>, and other HTML elements.
+    <section id="mentors" class="py-24 bg-white reveal-up">
+        <div class="site-container">
+            <div class="section-header">
+                <h2 class="section-eyebrow">为什么选我们</h2>
+                <h3 class="section-title">看看你的导师阵营</h3>
+                <div class="mt-6">
+                    <a href="cases.html" class="btn-pill btn-secondary">查看申请案例</a>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card-base card-tint hover-lift">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-3">👑 导师 A｜突破历史</h4>
+                    <p class="text-gray-500 leading-relaxed">
+                        拿下 Harvard CSE、EPFL MSCS（本校历史首枚）、CMU MIIS、Yale MSCS 等顶级录取；具备北美头部大厂 MLE 实习经历，熟悉科研与就业双赛道。
                     </p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-
-            <!-- Section 2 -->
-            <table class="content-table">
-              <tbody>
-                <tr>
-                  <td class="section-padding">
-                    <heading>Another Section</heading>
-                    <p>
-                      Add more content sections as needed.
+                </div>
+                <div class="card-base card-tint hover-lift">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-3">📊 导师 B｜跨专业申请</h4>
+                    <p class="text-gray-500 leading-relaxed">
+                        录取 UCLA MS STA、UNC DS、Wisc Research OR（带奖）、HKUST IEDA MPhil（全奖）；深耕 LLM、图生成与运筹结合的前沿研究。
                     </p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-
-            <!-- Footer Section -->
-            <table class="content-table">
-              <tbody>
-                <tr>
-                  <td class="zero-padding">
-                    <br />
-                    <p class="footer-text">
-                      © Beyond Shore
+                </div>
+                <div class="card-base card-tint hover-lift">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-3">🔥 导师 C｜学术指导</h4>
+                    <p class="text-gray-500 leading-relaxed">
+                        本科期间在 NeurIPS、ICLR、NAACL 等顶会发表一作，现任北美 Top 20 CS 名校 RA，专注 Agent、人机协作与多模态。
                     </p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+                </div>
+                <div class="card-base card-tint hover-lift">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-3">🌏 导师 D｜港新“活地图”</h4>
+                    <p class="text-gray-500 leading-relaxed">
+                        扫荡式斩获 NUS/NTU/CUHK/HKUST 全奖 CS PhD Offer，拥有港新学术圈与科研实习资源，提供关键的信息差支持。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Optional: Add your JavaScript files here -->
-    <!-- <script src="src/js/your-script.js"></script> -->
-  </body>
+    <section id="about" class="py-24 bg-gray-50 reveal-up">
+        <div class="site-container">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl mb-6">传统中介给不了的硬核保障</h2>
+                <p class="text-lg text-gray-500 mb-6 leading-relaxed">
+                    龙大人懂龙大人。我们深谙母校课程体系的优势与短板，能把你的背景转化为更有说服力的申请故事与科研轨迹。
+                </p>
+                <p class="text-lg text-gray-500 mb-6 leading-relaxed">
+                    团队连续深耕 25/26/27 Fall 申请季，实时跟进录取变化与导师偏好，给出更贴近当下的背景提升建议。
+                </p>
+                <p class="text-lg text-gray-500 leading-relaxed">
+                    我们实行少量招生制，确保每位同学获得高强度、深参与、可复盘的导师支持。我们不招“客户”，我们招未来的后浪和同行。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-gray-900 text-white text-center reveal-up">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6">名额极少，先到先谈</h2>
+            <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+                我们在顶峰等你。欢迎通过邮箱联系，开启你的硕博申请路线规划。
+            </p>
+            <a href="mailto:BeyondShore@outlook.com" class="btn-pill btn-white hover:-translate-y-0.5">
+                BeyondShore@outlook.com
+            </a>
+        </div>
+    </section>
+    </main>
+
+    <footer class="bg-white border-t border-gray-100 pt-16 pb-8">
+        <div class="site-container">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+                <div class="col-span-2 md:col-span-1">
+                    <span class="font-bold text-xl tracking-tight text-gray-900">Beyond Shore | 彼岸工作室</span>
+                    <p class="mt-4 text-sm text-gray-500 leading-relaxed">
+                        拒绝流水线文书，只做美国硕博与港新博士申请。
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gray-900 mb-4">服务</h4>
+                    <ul class="space-y-3 text-sm text-gray-500">
+                        <li><a href="#features" class="hover:text-gray-900 transition-colors">一对一咨询规划</a></li>
+                        <li><a href="#features" class="hover:text-gray-900 transition-colors">CV/SOP 精修</a></li>
+                        <li><a href="#features" class="hover:text-gray-900 transition-colors">双重套磁专项</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gray-900 mb-4">团队</h4>
+                    <ul class="space-y-3 text-sm text-gray-500">
+                        <li><a href="#mentors" class="hover:text-gray-900 transition-colors">导师阵营</a></li>
+                        <li><a href="cases.html" class="hover:text-gray-900 transition-colors">申请案例</a></li>
+                        <li><a href="#about" class="hover:text-gray-900 transition-colors">申请理念</a></li>
+                        <li><a href="#contact" class="hover:text-gray-900 transition-colors">咨询入口</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gray-900 mb-4">联系</h4>
+                    <ul class="space-y-3 text-sm text-gray-500">
+                        <li><a href="mailto:BeyondShore@outlook.com" class="hover:text-gray-900 transition-colors">BeyondShore@outlook.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-gray-400">
+                    &copy; 2026 Beyond Shore. All rights reserved.
+                </p>
+                <a href="mailto:BeyondShore@outlook.com" class="mt-4 md:mt-0 text-sm text-gray-500 hover:text-gray-900 transition-colors">
+                    Contact: BeyondShore@outlook.com
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/index.js"></script>
+</body>
 </html>
